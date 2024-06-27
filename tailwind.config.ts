@@ -14,6 +14,7 @@ const config: Config = {
         lufgamedium: ["var(--font-lufga-medium)"],
         lufgasemibold: ["var(--font-lufga-semi-bold)"],
         lufgabold: ["var(--font-lufga-bold)"],
+        urbanist: ["Urbanist", 'sans-serif'],
       },
     },
   },

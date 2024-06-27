@@ -17,4 +17,32 @@ body{
 :root {
   
 }
-
+.btn-banner-group {
+  position: absolute;
+  bottom: 8%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+.btn-banner-group ul li{
+  transition: all 0.5s ease-in-out;
+}
+.btn-banner-active{
+  background-color: #FD853A;
+  width:208px !important;
+  border-radius: 60px;
+}
+.btn-banner-group ul li span{
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: 300 ;
+}
+.btn-banner-group ul li span.btn-banner-act {
+  font-size: 26px;
+  line-height: 33px;
+  font-weight: 400 ;
+}
+.btn-banner{
+  width:129px;
+}
+/* slider for my services start */
