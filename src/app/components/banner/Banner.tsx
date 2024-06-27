@@ -10,7 +10,7 @@ const Banner = () => {
   };
   return (
     <ScreenContainer>
-      <section className="banner-section h-[846px] w-full overflow-hidden">
+      <section className="banner-section h-[824px] w-full overflow-hidden">
         <div className="flex flex-col w-full items-center mt-[37px] banner-first-section">
           <div className="capitalize w-[104px] h-[45px] bg-[#FFFFFF1A] border-[2px] border-[#171717] text-black text-[20px] font-lufgamedium font-medium leading-[26px] rounded-[38px] flex justify-center items-center relative">
             <span>Hello</span>

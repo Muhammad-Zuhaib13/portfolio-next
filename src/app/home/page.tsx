@@ -1,13 +1,13 @@
-import React from 'react'
-import Banner from '../components/banner/Banner'
-
+import React from "react";
+import Banner from "../components/banner/Banner";
+import MyServices from "../components/myservices/MyServices";
 const home = () => {
   return (
     <>
-    <Banner />
-    
+      <Banner />
+      <MyServices />
     </>
-  )
-}
+  );
+};
 
-export default home
+export default home;
