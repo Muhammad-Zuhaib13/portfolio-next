@@ -45,38 +45,62 @@ body {
   width: 129px;
 }
 /* slider for my services start */
+
 .services-card {
   max-width: 416px;
   width: 100%;
   height: 506px;
   position: relative;
+  cursor: pointer;
+}
+.services-card:hover .services-card-heading,
+.services-card:hover .services-card-mid, .services-card:hover .my-services-btn  {
+  background-color: #fd853a;
 }
 .services-card-heading {
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-top-right-radius: 50px;
   border-top-left-radius: 50px;
-  /* background-image: radial-gradient(
-    87.42% 50% at 50% 50%,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.5) 100%
-  ); */
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   background: rgba(255, 255, 255, 0.2);
+  transition: background-color 0.5s ease-in-out;
 }
-.services-card-mid{
+.services-card-mid {
   height: 95px;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   background: rgba(255, 255, 255, 0.2);
   border-left: 2px solid rgba(255, 255, 255, 0.5);
   border-right: 2px solid rgba(255, 255, 255, 0.5);
-
+  transition: background-color 0.5s ease-in-out;
 }
-.services-card-img-link{
+.my-services-btn{
+  transition: background-color 0.5s ease-in-out;
+}
+.services-card-img-link {
   border-bottom-right-radius: 50px;
   border-bottom-left-radius: 50px;
   position: absolute;
-  top:26%;
-  
+  top: 26%;
 }
+.my-services-swiper {
+  height: 562px;
+}
+.my-services-swiper .swiper-pagination .swiper-pagination-bullet {
+  transition: all 0.6s ease-in-out;
+  background-color: #e4e7ec;
+  width: 10px;
+  height: 10px;
+}
+
+.my-services-swiper .swiper-pagination .swiper-pagination-bullet-active {
+  width: 35px;
+  height: 10px;
+  padding: 0;
+  border-radius: 8px;
+  background-color: #fd853a;
+}
+/* .my-services-swiper .swiper-pagination {
+  bottom: -5px !important;
+} */
