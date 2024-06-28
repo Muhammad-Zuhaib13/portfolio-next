@@ -3,6 +3,7 @@ import Banner from "../components/banner/Banner";
 import MyServices from "../components/myservices/MyServices";
 import MyWorkExperience from "../components/myworkexp/MyWorkExperience";
 import HireMe from "../components/hireme/HireMe";
+import LetsConnect from "../components/letsconnect/LetsConnect";
 const home = () => {
   return (
     <>
@@ -10,6 +11,7 @@ const home = () => {
       <MyServices />
       <MyWorkExperience />
       <HireMe />
+      <LetsConnect />
     </>
   );
 };
