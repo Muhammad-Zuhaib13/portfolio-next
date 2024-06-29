@@ -5,6 +5,7 @@ import MyWorkExperience from "../components/myworkexp/MyWorkExperience";
 import HireMe from "../components/hireme/HireMe";
 import LetsConnect from "../components/letsconnect/LetsConnect";
 import Marquee from "../components/marquee/Marquee";
+import MyBlogs from "../components/myblogs/MyBlogs";
 const home = () => {
   return (
     <>
@@ -14,6 +15,7 @@ const home = () => {
       <HireMe />
       <LetsConnect />
       <Marquee />
+      <MyBlogs />
     </>
   );
 };
