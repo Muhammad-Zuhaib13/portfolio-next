@@ -54,7 +54,8 @@ body {
   cursor: pointer;
 }
 .services-card:hover .services-card-heading,
-.services-card:hover .services-card-mid, .services-card:hover .my-services-btn  {
+.services-card:hover .services-card-mid,
+.services-card:hover .my-services-btn {
   background-color: #fd853a;
 }
 .services-card-heading {
@@ -75,7 +76,7 @@ body {
   border-right: 2px solid rgba(255, 255, 255, 0.5);
   transition: background-color 0.5s ease-in-out;
 }
-.my-services-btn{
+.my-services-btn {
   transition: background-color 0.5s ease-in-out;
 }
 .services-card-img-link {
@@ -104,3 +105,43 @@ body {
 /* .my-services-swiper .swiper-pagination {
   bottom: -5px !important;
 } */
+/* .list-image-star {
+  list-style-image: url("/assets/icons/Star-li-img.svg");
+  padding: 0px 60px;
+  display: flex;
+  gap: 50px;
+  animation: marquee 5s linear infinite;
+}
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+} */
+.marquee-container {
+  width: 101%;
+  overflow: hidden;
+  position: relative;
+  background-color: #ffffff;
+  height: 63px;
+  transform: rotate(-3deg);
+  left: -10px;
+}
+
+.list-image-star {
+  list-style-image: url("/assets/icons/Star-li-img.svg");
+  padding: 0px 60px;
+  display: flex;
+  gap: 50px;
+  /* position: absolute; */
+  white-space: nowrap;
+  width: 100%;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
