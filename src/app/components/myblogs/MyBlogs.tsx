@@ -7,33 +7,37 @@ const MyBlogs = () => {
     {
       id: 1,
       title: "Web Designing",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales",
-      image: "/assets/images/services-card-new.png",
+      image: "/assets/images/blog-img-1.png",
+      writer:"Einstine",
+      publisDate:'10 Nov, 2023',
+      blogdes:'Design Unraveled: Behind the Scenes of UI/UX Magic',
       link: "/",
     },
     {
       id: 2,
       title: "SPA Web Designing",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales",
-      image: "/assets/images/services-card-new.png",
+      image: "/assets/images/blog-img-2.png",
+      writer:"Einstine",
+      publisDate:'10 Nov, 2023',
+      blogdes:'Design Unraveled: Behind the Scenes of UI/UX Magic',
       link: "/",
     },
     {
       id: 3,
       title: "SEO Optimization",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales",
-      image: "/assets/images/services-card-new.png",
+      image: "/assets/images/blog-img-3.png",
+      writer:"Einstine",
+      publisDate:'10 Nov, 2023',
+      blogdes:'Design Unraveled: Behind the Scenes of UI/UX Magic',
       link: "/",
     },
     {
       id: 4,
       title: "UI/UX Design",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales",
-      image: "/assets/images/services-card-new.png",
+      image: "/assets/images/blog-img-2.png",
+      writer:"Einstine",
+      publisDate:'10 Nov, 2023',
+      blogdes:'Design Unraveled: Behind the Scenes of UI/UX Magic',
       link: "/",
     },
   ];
@@ -52,26 +56,42 @@ const MyBlogs = () => {
               </button>
             </div>
           </div>
-          <div className="my-blogs-cards flex flex-row flex-wrap gap-[25.5px]">
+          <div className="my-blogs-cards flex flex-row flex-wrap gap-[25px] justify-between">
             {myServicesData.map((data) => {
               return (
-                <div className="services-card">
-                  <div className="w-full pt-[44px] pb-[23px] services-card-heading">
-                    <h3 className="text-[#ffffff] font-lufgamedium font-medium text-[32px] leading-[42px] px-[37px]">
-                      {data?.title}
-                    </h3>
-                  </div>
-                  <div className="services-card-mid"></div>
-                  <div className="services-card-img-link">
+                <div className="myblogs-card flex flex-col gap-[35px]" key={data?.id}>
+                  <div className="myblogs-card-img-link">
                     <div className="w-full h-full relative">
                       <Image
                         src={data?.image}
                         alt={data?.title}
-                        className="w-full h-full"
+                        className="w-full h-[416px]"
                       />
-                      <button className="text-[#ffffff] bg-[#1D2939] p-[22px] w-[114px] h-[114px] rounded-full absolute bottom-0 right-0 my-services-btn">
+                      <button className="text-[#ffffff] bg-[#1D2939]  w-[114px] h-[114px] rounded-full absolute bottom-0 right-0 myblogs-btn">
                         <ArrowOutwardIcon style={{ fontSize: "45px" }} />
                       </button>
+                    </div>
+                  </div>
+                  <div className="myblogs-card-body flex flex-col gap-[35px]">
+                    <div>
+                      <h4 className="w-fit px-[32px] h-[54px] rounded-[24px] bg-[#F2F4F7] text-[20px] leading-[24px] text-black flex justify-center items-center">
+                       {data?.title}
+                      </h4>
+                    </div>
+                    <div >
+                      <ul className="flex flex-row gap-[35px] myblogs-ul">
+                        <li className="text-[20px] leading-[24px] text-[#344054]">
+                          Jayesh Patil
+                        </li>
+                        <li className="text-[20px] leading-[24px] text-[#344054]">
+                          10 Nov, 2023
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="">
+                      <p className="font-lufgalight text-[32px] leading-[42px] text-[#344054] line-clamp-2">
+                        Design Unraveled: Behind the Scenes of UI/UX Magic
+                      </p>
                     </div>
                   </div>
                 </div>

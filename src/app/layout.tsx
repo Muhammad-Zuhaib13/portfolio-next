@@ -4,6 +4,7 @@ import '@fontsource/urbanist';
 import "./globals.css";
 import localFont from "next/font/local";
 import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -58,6 +59,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
