@@ -1,12 +1,10 @@
+"use client";
 import React from "react";
 import { Image } from "react-bootstrap";
 import { SwiperSlide, Swiper } from "swiper/react";
-import { A11y, FreeMode, Navigation, Pagination } from "swiper/modules";
+import { A11y, FreeMode, Navigation } from "swiper/modules";
+import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 const Testimonials = () => {
   const testimonialsData = [
     {
@@ -84,39 +82,71 @@ const Testimonials = () => {
           </div>
         </div>
         <div className="testimonial-slider w-full relative">
-        <Swiper
-              slidesPerView={3}
-              spaceBetween={24}
-              centeredSlides={false}
-              //  speed={11000}
-              pagination={{
-                clickable: true,
-              }}
-              freeMode={true}
-              modules={[Pagination, Navigation, A11y, FreeMode]}
-              className="my-portfolio-swiper w-full"
-              loop={true}
-            >
-              {testimonialsData.map((data) => {
-                return (
-                  <SwiperSlide key={data?.id} virtualIndex={data?.id}>
-                    <div
-                      className=""
-                    >
-                      <Image
-                        src="/assets/images/portfolio1.png"
-                        className="rounded-[12px] w-full h-[846px]"
-                      />
-                      <div className="absolute bottom-0 left-[20px] ">
-                        <h2 className="text-[70px] leading-[91px] font-lufgabold text-white ">
-                          Liante
-                        </h2>
+          <Swiper
+            slidesPerView={"auto"}
+            spaceBetween={24}
+            centeredSlides={true}
+            speed={11000}
+            freeMode={true}
+            modules={[Navigation, A11y, FreeMode]}
+            className="my-testimonials-swiper w-full"
+            loop={true}
+          >
+            {testimonialsData.map((data) => {
+              return (
+                <SwiperSlide
+                  key={data?.id}
+                  virtualIndex={data?.id}
+                  className="max-w-[784px] w-full h-[265px]"
+                >
+                  <div className="testimonial-card">
+                    <div className="testimonials-card-tgroup flex flex-row justify-between relative">
+                      <div className="flex flex-col gap-[14px]">
+                        <div className="flex flex-row items-center gap-[12px]">
+                          <div className="">
+                            <Image
+                              src={data?.profileImg}
+                              className="w-[55px] h-[55px] rounded-full object-cover overflow-hidden"
+                            />
+                          </div>
+                          <div className="flex flex-col">
+                            <h2 className="text-[28.2px] text-[#FCFCFD] leading-[28px] font-bold font-urbanist">
+                              {data?.name}
+                            </h2>
+                            <h4 className="text-[18.28pxpx] text-[#FCFCFD] leading-[21.93px] font-light font-urbanist">
+                              {data?.roleOrganization}
+                            </h4>
+                          </div>
+                        </div>
+                        <div className="flex flex-row gap-[6px] items-center">
+                          <Image
+                            src={data?.startImg}
+                            className="w-[160px] h-[32px] object-cover"
+                          />
+                          <span className="font-lufgamedium font-medium text-[25.69px] leading-[33.53px] text-[#ffffff] flex flex-row items-baseline">
+                            {data?.rating}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="absolute right-[-5%] top-[-45%]">
+                        <FormatQuoteIcon
+                          sx={{
+                            fontSize: "180px !important",
+                            color: "#6670854D",
+                          }}
+                        />
                       </div>
                     </div>
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
+                    <div className="testimonial-comment">
+                      <p className="text-[20px] font-lufgalight font-normal text-[#ffffff] leading-[26.1px] text-justify">
+                        {data?.comment}
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </div>
       </div>
     </section>

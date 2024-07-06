@@ -41,7 +41,7 @@ const MyWorkExperience = () => {
               My <span className="text-[#FD853A]">Work Experience</span>
             </h1>
           </div>
-          <div className="mb-[155px]  flex flex-col gap-[6px]">
+          <div className="flex flex-col gap-[6px]">
             {/* 1 */}
             {data?.map((value, index) => {
               return (

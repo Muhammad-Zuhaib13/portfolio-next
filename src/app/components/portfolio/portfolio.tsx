@@ -60,7 +60,7 @@ const MyServices = () => {
   console.log("activeBtn", activeBtn);
 
   return (
-    <section className="my-services-section   bg-no-repeat bg-bottom bg-cover h-[878px] w-full rounded-[60px] pt-[116px] pb-[52px]">
+    <section className="my-portfolio-section  bg-no-repeat bg-bottom bg-cover h-[878px] w-full rounded-[60px] py-[97px]">
       <ScreenContainer>
         <div className="flex flex-col gap-[96px]">
           <div className="flex justify-between border">

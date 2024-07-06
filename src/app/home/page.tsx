@@ -14,9 +14,9 @@ const home = () => {
       <Banner />
       <MyServices />
       <MyWorkExperience />
+      <HireMe />
       <Portfolio />
       <Testimonials />
-      <HireMe />
       <LetsConnect />
       <Marquee />
       <MyBlogs />
