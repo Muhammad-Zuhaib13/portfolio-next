@@ -1,6 +1,12 @@
 import React from "react";
 import { Image } from "react-bootstrap";
+import { SwiperSlide, Swiper } from "swiper/react";
+import { A11y, FreeMode, Navigation, Pagination } from "swiper/modules";
 
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 const Testimonials = () => {
   const testimonialsData = [
     {
@@ -8,8 +14,8 @@ const Testimonials = () => {
       name: "Jayesh Patil",
       roleOrganization: "CEO Lirante",
       rating: "5.0",
-      profileImg: "/",
-      startImg: "/",
+      profileImg: "/assets/images/profile-img-1.png",
+      startImg: "/assets/images/rating-stars.png",
       comment:
         "consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.Sed lobortis orci elementum egestas lobortis.Sed lobortis orci elementum egestas lobortis.",
     },
@@ -18,8 +24,8 @@ const Testimonials = () => {
       name: "Jayesh Patil",
       roleOrganization: "CEO Lirante",
       rating: "5.0",
-      profileImg: "/",
-      startImg: "/",
+      profileImg: "/assets/images/profile-img-1.png",
+      startImg: "/assets/images/rating-stars.png",
       comment:
         "consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.Sed lobortis orci elementum egestas lobortis.Sed lobortis orci elementum egestas lobortis.",
     },
@@ -28,8 +34,8 @@ const Testimonials = () => {
       name: "Jayesh Patil",
       roleOrganization: "CEO Lirante",
       rating: "5.0",
-      profileImg: "/",
-      startImg: "/",
+      profileImg: "/assets/images/profile-img-1.png",
+      startImg: "/assets/images/rating-stars.png",
       comment:
         "consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.Sed lobortis orci elementum egestas lobortis.Sed lobortis orci elementum egestas lobortis.",
     },
@@ -38,8 +44,8 @@ const Testimonials = () => {
       name: "Jayesh Patil",
       roleOrganization: "CEO Lirante",
       rating: "5.0",
-      profileImg: "/",
-      startImg: "/",
+      profileImg: "/assets/images/profile-img-1.png",
+      startImg: "/assets/images/rating-stars.png",
       comment:
         "consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.Sed lobortis orci elementum egestas lobortis.Sed lobortis orci elementum egestas lobortis.",
     },
@@ -77,7 +83,41 @@ const Testimonials = () => {
             />
           </div>
         </div>
-        <div className="testimonial-slider w-full relative"></div>
+        <div className="testimonial-slider w-full relative">
+        <Swiper
+              slidesPerView={3}
+              spaceBetween={24}
+              centeredSlides={false}
+              //  speed={11000}
+              pagination={{
+                clickable: true,
+              }}
+              freeMode={true}
+              modules={[Pagination, Navigation, A11y, FreeMode]}
+              className="my-portfolio-swiper w-full"
+              loop={true}
+            >
+              {testimonialsData.map((data) => {
+                return (
+                  <SwiperSlide key={data?.id} virtualIndex={data?.id}>
+                    <div
+                      className=""
+                    >
+                      <Image
+                        src="/assets/images/portfolio1.png"
+                        className="rounded-[12px] w-full h-[846px]"
+                      />
+                      <div className="absolute bottom-0 left-[20px] ">
+                        <h2 className="text-[70px] leading-[91px] font-lufgabold text-white ">
+                          Liante
+                        </h2>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+        </div>
       </div>
     </section>
   );
