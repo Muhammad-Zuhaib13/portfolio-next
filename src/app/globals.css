@@ -178,10 +178,10 @@ body {
 
 @keyframes marquee {
   0% {
-    transform: translateX(0%);
+    transform: translateY(0%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateY(-56%);
   }
 }
 .myblogs-card {
