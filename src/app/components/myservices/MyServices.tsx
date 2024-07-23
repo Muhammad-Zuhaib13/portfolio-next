@@ -55,7 +55,7 @@ const MyServices = () => {
     <section className="my-services-section bg-[url('/assets/images/service-bg-img.png')]  bg-no-repeat bg-bottom bg-cover h-[878px] w-full rounded-[60px] pt-[116px] pb-[52px]">
       <ScreenContainer>
         <div className="flex flex-col gap-[96px]">
-          <div className="flex flex-row justify-between items-center">
+          <div className="flex lg:flex-row flex-col justify-between items-center">
             <h2 className="font-lufgamedium text-[48px] leading-[48px] flex flex-row gap-[6px]">
               <span className="text-[#ffffff]">My</span>
               <span className="text-[#FD853A]">Services</span>
