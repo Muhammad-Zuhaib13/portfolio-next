@@ -10,7 +10,7 @@ import MyBlogs from "../components/myblogs/MyBlogs";
 import Testimonials from "../components/testimonials/Testimonials";
 const home = () => {
   return (
-    <>
+    <main>
       <Banner />
       <MyServices />
       <MyWorkExperience />
@@ -20,7 +20,7 @@ const home = () => {
       <LetsConnect />
       <Marquee />
       <MyBlogs />
-    </>
+    </main>
   );
 };
 
