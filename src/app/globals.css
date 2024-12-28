@@ -23,6 +23,37 @@ body {
   left: 0;
   right: 0;
 }
+.container-hamburger {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar-one,
+.bar-two,
+.bar-three {
+  width: 24px;
+  height: 3px;
+  background-color: #FD853A;
+  border-radius: 6px;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+.collapse-bar .bar-one {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.collapse-bar .bar-two {
+  opacity: 0;
+}
+
+.collapse-bar .bar-three {
+  transform: translate(0, -11px) rotate(45deg);
+}
+.collapsible-content {
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
 .btn-banner-group ul li {
   transition: all 0.5s ease-in-out;
 }
@@ -222,4 +253,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 14px;
+}
+@media only screen and (max-width: 1280px) {
+  .mid-max-px {
+    padding: 0 15px;
+  }
 }

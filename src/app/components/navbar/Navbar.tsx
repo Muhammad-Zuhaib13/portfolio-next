@@ -10,10 +10,11 @@ const Navbar = () => {
   const handleNavigate = (key: string) => {
     setActiveBtn(key);
   }
+  const [open, setOpen] = useState<boolean>(false);
   return (
     <ScreenContainer>
-      <nav className="navbar bg-[#171717] h-[86px] w-full rounded-[50px] mt-[40px] flex flex-row justify-between px-[10px]">
-        <ul className="flex flex-row gap-[14.17px] justify-center items-center">
+      <nav className="navbar lg:bg-[#171717] bg-transparent h-[86px] w-full rounded-[50px] lg:mt-[40px] mt-0 flex flex-row justify-between lg:px-[10px] px-0">
+        <ul className="hidden flex-row gap-[14.17px] justify-center items-center lg:flex">
           {firstHalfNav.map((link) => (
             <li
               key={link}
@@ -24,11 +25,11 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div className="w-[307px] h-full flex flex-row justify-center items-center">
+        <div className="w-[307px] h-full flex flex-row lg:justify-center justify-start items-center">
           <span className="text-[#FFFFFF] text-[47px] font-urbanist uppercase font-bold bg-[#FD853A] px-[8px] rounded-[50%]">JC</span>
-          <span className="text-[#FFFFFF] text-[47px] font-urbanist uppercase font-bold">JCREA</span>
+          <span className="lg:text-[#FFFFFF] text-black text-[47px] font-urbanist uppercase font-bold">JCREA</span>
         </div>
-        <ul className="flex flex-row gap-[14.17px] justify-center items-center">
+        <ul className="lg:flex flex-row gap-[14.17px] justify-center items-center hidden">
           {secondHalfNav.map((link) => (
             <li
             key={link}
@@ -39,6 +40,16 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+        <div className="lg:hidden flex items-center justify-center ">
+            <button
+              className={`container-hamburger ${open ? "collapse-bar" : ""}`}
+              // onClick={toggleDrawer(true)}
+            >
+              <div className="bar-one sm:w-[20px] sm:h-[2px]"></div>
+              <div className="bar-two sm:w-[20px] sm:h-[2px]"></div>
+              <div className="bar-three sm:w-[20px] sm:h-[2px]"></div>
+            </button>
+          </div>
       </nav>
     </ScreenContainer>
   );

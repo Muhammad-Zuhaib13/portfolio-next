@@ -7,7 +7,7 @@ interface Props {
 
 const ScreenContainer = ({ children, style }: Props) => {
   return (
-    <div className="max-w-[1298px] w-full mx-auto" style={style}>
+    <div className="max-w-[1298px] w-full mx-auto mid-max-px" style={style}>
       {children}
     </div>
   );

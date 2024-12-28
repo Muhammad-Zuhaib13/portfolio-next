@@ -9,7 +9,7 @@ const Footer = () => {
     <section className="footer-section bg-[#272727] rounded-tl-[24px] rounded-tr-[24px]">
       <ScreenContainer>
         <div className="py-[25px]">
-          <div className="flex flex-row justify-between items-center my-[44px]">
+          <div className="flex lg:flex-row flex-col justify-between items-center my-[44px]">
             <h2 className="font-lufgabold font-bold text-[48px] leading-[63px] text-[#FCFCFD]">
               Lets Connect there
             </h2>
@@ -23,7 +23,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="bg-[#475467] w-full h-[2px] my-[55px]"></div>
-          <div className="flex flex-row gap-[29px] justify-between">
+          <div className="flex lg:flex-row flex-col gap-[29px] justify-between">
             <div className="flex flex-col gap-[34px]">
               <div className="w-[307px] h-[86px] flex flex-row justify-start items-center">
                 <span className="text-[#FFFFFF] text-[47px] font-urbanist uppercase font-bold bg-[#FD853A] px-[8px] rounded-[50%]">
@@ -199,7 +199,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="bg-[#475467] w-full h-[2px] my-[55px]"></div>
-          <div className="flex flex-row justify-between">
+          <div className="flex lg:flex-row flex-col justify-between">
             <div className="">
               <p className="text-[#FFFFFF] font-lufgalight text-[20px] leading-[26px]">
                 Copyright&copy; 2023 Jayesh. All Rights Reserved.

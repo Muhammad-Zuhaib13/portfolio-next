@@ -84,7 +84,7 @@ const Testimonials = () => {
         <div className="testimonial-slider w-full relative">
           <Swiper
             slidesPerView={"auto"}
-            spaceBetween={24}
+            spaceBetween={30}
             centeredSlides={true}
             speed={11000}
             freeMode={true}

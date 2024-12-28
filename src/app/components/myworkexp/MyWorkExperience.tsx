@@ -33,7 +33,7 @@ const MyWorkExperience = () => {
     
   ];
   return (
-    <section className="my-work-experience-section">
+    <section className="my-work-experience-section bg-transparent dark:bg-black">
       <ScreenContainer>
         <div className="flex flex-col">
           <div className="my-[85px]">
