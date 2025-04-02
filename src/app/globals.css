@@ -209,10 +209,10 @@ body {
 
 @keyframes marquee {
   0% {
-    transform: translateY(0%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateY(-56%);
+    transform: translateX(-56%);
   }
 }
 .myblogs-card {
@@ -254,6 +254,7 @@ body {
   flex-direction: column;
   gap: 14px;
 }
+
 @media only screen and (max-width: 1280px) {
   .mid-max-px {
     padding: 0 15px;

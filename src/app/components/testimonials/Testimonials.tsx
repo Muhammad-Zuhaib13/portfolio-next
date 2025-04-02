@@ -4,8 +4,18 @@ import { Image } from "react-bootstrap";
 import { SwiperSlide, Swiper } from "swiper/react";
 import { A11y, FreeMode, Navigation } from "swiper/modules";
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
+import { motion } from "motion/react";
 
 const Testimonials = () => {
+  const slideVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   const testimonialsData = [
     {
       id: 1,
@@ -99,7 +109,13 @@ const Testimonials = () => {
                   virtualIndex={data?.id}
                   className="max-w-[784px] w-full h-[265px]"
                 >
-                  <div className="testimonial-card">
+                  <motion.div
+                    variants={slideVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                    className="testimonial-card"
+                  >
                     <div className="testimonials-card-tgroup flex flex-row justify-between relative">
                       <div className="flex flex-col gap-[14px]">
                         <div className="flex flex-row items-center gap-[12px]">
@@ -142,7 +158,7 @@ const Testimonials = () => {
                         {data?.comment}
                       </p>
                     </div>
-                  </div>
+                  </motion.div>
                 </SwiperSlide>
               );
             })}
